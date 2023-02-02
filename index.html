@@ -14,6 +14,11 @@
     <div id="calculator">
         <form action="#">
             <div class="calcInput">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required />
+            </div>
+            
+            <div class="calcInput">
                 <label for="numOfReps">Number of Reps (Today)</label>
                 <input type="number" id="numOfReps" min="1" step="1" onkeypress="return onlyNumberKey(event)" onblur="if(this.value==0){this.value=1}"  />
             </div>
@@ -49,7 +54,7 @@
                 <output class="bubble"></output>
             </div>
 
-            <input type="button" value="Calculate" style="display:none;"></input>
+            <input type="submit" value="Calculate" style="display:none;"></input>
 
         </form>
         <div id="showResults">
