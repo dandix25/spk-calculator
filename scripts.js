@@ -227,5 +227,5 @@ function setBubble(range, bubble) {
 }
 
 function setCompanyName() {
-    companyValue.innerHTML = company;
+    companyValue.innerText = company;
 }
