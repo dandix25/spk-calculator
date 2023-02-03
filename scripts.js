@@ -18,6 +18,7 @@ const adherenceDef = document.querySelector('#adherenceDef .resultValue');
 const totalGap = document.querySelector('#totalGap .resultValue');
 const grade = document.querySelector('#grade .resultValue');
 const spkRoi = document.querySelector('#spkRoi .resultValue');
+const companyValue = document.querySelector('#companyValue .resultValue');
 
 // Mimic excel's ROUND formula
 function round(num, numDecimalPlaces) {
@@ -38,6 +39,7 @@ function setInputValues(){
     quotaAttainment = parseInt(document.getElementById('quotaAttainment').value) / 100;
     timeInMeetings = parseInt(document.getElementById('timeInMeetings').value);
     processAdherence = parseInt(document.getElementById('processAdherence').value);
+    companyName = document.getElementById('company').value;
 }
 
 // Non Revenue Activities Calculations
@@ -167,6 +169,7 @@ calcSubmit.addEventListener('click', function() {
         roiCalc();
         totalGapCalc();
         efficiencyCalc();
+        setCompanyName();
     }, 1000);
 });
 
@@ -220,4 +223,8 @@ function setBubble(range, bubble) {
 
   // Sorta magic numbers based on size of the native UI thumb
   bubble.style.left = newVal + "%";
+}
+
+function setCompanyName() {
+    companyValue.innerHTML = company;
 }
