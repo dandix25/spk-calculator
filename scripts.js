@@ -170,7 +170,7 @@ calcSubmit.addEventListener('click', function() {
         roiCalc();
         totalGapCalc();
         efficiencyCalc();
-        setCompanyName();
+        companyValue.innerText = companyName;
     }, 1000);
 });
 
@@ -224,8 +224,4 @@ function setBubble(range, bubble) {
 
   // Sorta magic numbers based on size of the native UI thumb
   bubble.style.left = newVal + "%";
-}
-
-function setCompanyName() {
-    companyValue.innerText = company;
 }
