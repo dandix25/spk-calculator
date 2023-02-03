@@ -11,6 +11,7 @@ var timeInMeetings = 0;
 var processAdherence = 0;
 var nonRevActivitiesValue = 0;
 var adherenceDeficit = 0;
+var companyName = 'Your Company';
 
 // Result Value divs
 const nonRevActivities = document.querySelector('#nonRevActivities .resultValue');
